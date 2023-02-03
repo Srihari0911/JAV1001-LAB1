@@ -16,3 +16,12 @@ fun main() {
         "lb" -> result = "$number$measurementUnit = ${0.45*number}kg"
         "g"  -> result = "$number$measurementUnit = ${0.04*number}oz"
         "oz" -> result = "$number$measurementUnit = ${28.35*number}g"
+        "C to F" -> result = "$number$measurementUnit = ${number*1.80+32}F" //Converted 9/5 to decimal
+        "C to K" -> result = "$number$measurementUnit = ${number+273.15}K"
+        "F to C" -> result = "$number$measurementUnit = ${(number-32)*0.555555556}C" //Converted 5/9 to decimal
+        "F to K" -> result = "$number$measurementUnit = ${(number-32)*0.555555556+273.15}K" //Converted 5/9 to decimal
+
+        else -> println("Unable to convert")
+    }
+    println(result)
+}
